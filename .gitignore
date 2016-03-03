@@ -12,3 +12,7 @@ tmp/no_version
 *.beam
 
 *~
+
+DRAKONEditor/tcl
+
+**xcuserdata*

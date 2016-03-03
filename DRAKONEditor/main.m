@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #include <stdio.h>
+#include <string.h>
 
 #define BUFFER_SIZE 2000
 
@@ -63,6 +64,26 @@ int GetPathToTcl(char* output, int length)
 	return 0;
 }
 
+char *GetPathToDiagram(int argc, char *argv[])
+{
+	char *ext;
+
+	int i;
+	for (i = 0; i < argc; i++)
+	{
+		ext = strrchr(argv[i], '.');
+		if (ext != NULL)
+		{
+			if (strcmp(ext, ".drn") == 0)
+			{
+				return argv[i];
+			}
+		}
+	}
+
+	return NULL;
+}
+
 static void InitLogger(void)
 {
 	g_logger = stdout;
@@ -77,7 +98,7 @@ static void CloseLogger(void)
 	}
 }
 
-int LaunchScript(void)
+int LaunchScript(char *diagramPathC)
 {
 	InitLogger();
 	
@@ -95,14 +116,18 @@ int LaunchScript(void)
 	const char* scriptPathC = [fullScriptPath UTF8String];
 	fprintf(g_logger, "tclsh:\n%s\n", tclPathC);
 	fprintf(g_logger, "script:\n%s\n", scriptPathC);
-	
+	if (diagramPathC)
+	{
+		fprintf(g_logger, "diagram:\n%s\n", diagramPathC);
+	}
+
 	CloseLogger();
 	
 	pid_t pid = fork();
 	if (pid == 0)
 	{
 		// This is the child process.
-		execl(tclPathC, tclPathC, scriptPathC, NULL);
+		execl(tclPathC, tclPathC, scriptPathC, diagramPathC, NULL);
 	}
 	return 1;
 }
@@ -110,7 +135,9 @@ int LaunchScript(void)
 
 int main(int argc, char *argv[])
 {
-	if (LaunchScript())
+	char *diagram = GetPathToDiagram(argc, argv);
+
+	if (LaunchScript(diagram))
 	{
 		return 0;
 	}
