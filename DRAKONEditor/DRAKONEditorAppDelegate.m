@@ -143,8 +143,10 @@ int LaunchScript(const char *diagramPathC)
 		LaunchScript(diagramFile.UTF8String);
 		[NSApp terminate:nil];
 	}
-
-	[self.window setIsVisible:YES];
+	else
+	{
+		[self.window setIsVisible:YES];
+	}
 }
 
 - (BOOL)application:(NSApplication *)application openFile:(NSString *)file {
