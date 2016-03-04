@@ -14,7 +14,7 @@
 				<string>drn</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string>logo</string>
+			<string>document</string>
 			<key>CFBundleTypeName</key>
 			<string>DRAKON Editor</string>
 			<key>CFBundleTypeRole</key>

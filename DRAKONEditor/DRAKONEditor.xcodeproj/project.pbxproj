@@ -14,6 +14,7 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CD59899D1493572D00FFCB9A /* tcl in Resources */ = {isa = PBXBuildFile; fileRef = CD5989291493572D00FFCB9A /* tcl */; };
 		CD598A15149363E600FFCB9A /* logo.icns in Resources */ = {isa = PBXBuildFile; fileRef = CD598A14149363E600FFCB9A /* logo.icns */; };
+		E464FF4A1C894F6D005CF813 /* document.icns in Resources */ = {isa = PBXBuildFile; fileRef = E464FF491C894F6D005CF813 /* document.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8D1107320486CEB800E47090 /* DRAKONEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRAKONEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5989291493572D00FFCB9A /* tcl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tcl; sourceTree = "<group>"; };
 		CD598A14149363E600FFCB9A /* logo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = logo.icns; sourceTree = "<group>"; };
+		E464FF491C894F6D005CF813 /* document.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = document.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				CD598A14149363E600FFCB9A /* logo.icns */,
+				E464FF491C894F6D005CF813 /* document.icns */,
 				8D1107310486CEB800E47090 /* DRAKONEditor-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -179,6 +182,7 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				CD59899D1493572D00FFCB9A /* tcl in Resources */,
 				CD598A15149363E600FFCB9A /* logo.icns in Resources */,
+				E464FF4A1C894F6D005CF813 /* document.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
