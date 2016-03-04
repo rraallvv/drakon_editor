@@ -620,7 +620,7 @@
 					<string>{{490, 422}, {597, 213}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{490, 422}, {597, 213}}</string>
-					<integer value="1"/>
+					<integer value="0"/>
 					<string>{{33, 99}, {480, 360}}</string>
 					<string>{3.40282e+38, 3.40282e+38}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

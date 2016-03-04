@@ -6,6 +6,21 @@
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
 	<string>DRAKON Editor</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>drn</string>
+			</array>
+			<key>CFBundleTypeIconFile</key>
+			<string>logo</string>
+			<key>CFBundleTypeName</key>
+			<string>DRAKON Editor</string>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+		</dict>
+	</array>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
