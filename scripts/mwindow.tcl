@@ -409,6 +409,7 @@ proc create_ui { } {
 	
 	
 #	wm geometry . 1000x600
+	wm geometry . [join [wm maxsize .] x]
 	
 	# Magic command before creating menus
 	#option add *tearOff 0
